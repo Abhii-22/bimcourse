@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
+import { Clock, GraduationCap, Users, ArrowLeft, Building, ClipboardCheck, Rocket, CheckCircle2 } from 'lucide-react';
 import './CourseDetail.css';
 
 const CourseDetail = () => {
@@ -16,7 +17,7 @@ const CourseDetail = () => {
       category: 'Architecture & Design',
       description: 'Learn the principles of architectural design, from initial concept to final presentation. This course covers space planning, building materials, and modern design software.',
       duration: '4 Months',
-      level: 'Beginner to Intermediate',
+      level: 'Beginner to Advanced',
       audience: 'Aspiring Architects, Students',
       curriculum: [
         'Introduction to Architectural Principles',
@@ -43,8 +44,8 @@ const CourseDetail = () => {
       title: 'Interior Design',
       category: 'Design & Aesthetics',
       description: 'Master the art of creating beautiful and functional interior spaces. This course explores color theory, material selection, and spatial arrangement to bring your vision to life.',
-      duration: '8 Months',
-      level: 'All Levels',
+      duration: '4 Months',
+      level: 'Beginner to Advanced',
       audience: 'Design Enthusiasts, Homeowners',
       curriculum: [
         'Fundamentals of Interior Design',
@@ -72,7 +73,7 @@ const CourseDetail = () => {
       category: 'Digital Arts',
       description: 'Dive into the world of 3D modeling. Learn to create stunning 3D assets for games, films, and architectural visualization using industry-standard software.',
       duration: '4 Months',
-      level: 'Intermediate',
+      level: 'Beginner to Advanced',
       audience: 'Artists, Designers, Hobbyists',
       curriculum: [
         'Introduction to 3D Modeling Concepts',
@@ -99,8 +100,8 @@ const CourseDetail = () => {
       title: 'Site Planning',
       category: 'Urban & Land Planning',
       description: 'Understand the essentials of site analysis and planning. This course covers land use, zoning regulations, environmental impact, and sustainable design practices.',
-      duration: '7 Months',
-      level: 'Intermediate',
+      duration: '4 Months',
+      level: 'Beginner to Advanced',
       audience: 'Urban Planners, Landscape Architects',
       curriculum: [
         'Principles of Site Analysis',
@@ -130,7 +131,7 @@ const CourseDetail = () => {
   return (
     <div className="course-detail-page">
       <div className="course-detail-container">
-                <button onClick={() => navigate(-1)} className="back-link">&larr; Back to Courses</button>
+                        <button onClick={() => navigate(-1)} className="back-link"><ArrowLeft size={16} /> Back to Courses</button>
         <div className="course-detail-content">
           <main className="course-main-content">
             <span className="course-category">{course.category}</span>
@@ -138,17 +139,17 @@ const CourseDetail = () => {
             <p className="course-description">{course.description}</p>
             <div className="info-cards">
               <div className="info-card">
-                <div className="info-icon">⏱️</div>
+                                <div className="info-icon"><Clock size={32} /></div>
                 <span>Duration</span>
                 <strong>{course.duration}</strong>
               </div>
               <div className="info-card">
-                <div className="info-icon">🎓</div>
+                                <div className="info-icon"><GraduationCap size={32} /></div>
                 <span>Level</span>
                 <strong>{course.level}</strong>
               </div>
               <div className="info-card">
-                <div className="info-icon">👥</div>
+                                <div className="info-icon"><Users size={32} /></div>
                 <span>Audience</span>
                 <strong>{course.audience}</strong>
               </div>
@@ -161,26 +162,19 @@ const CourseDetail = () => {
                 ))}
               </ul>
             </div>
-            <div className="learning-outcomes">
+                        <div className="learning-outcomes">
               <h2>What You'll Learn</h2>
-              <div className="outcomes-grid">
-                <ul>
-                  {course.whatYoullLearn.slice(0, 2).map((item, index) => (
-                    <li key={index}>✓ {item}</li>
-                  ))}
-                </ul>
-                <ul>
-                  {course.whatYoullLearn.slice(2, 4).map((item, index) => (
-                    <li key={index}>✓ {item}</li>
-                  ))}
-                </ul>
-              </div>
+              <ul className="outcomes-grid">
+                {course.whatYoullLearn.map((item, index) => (
+                  <li key={index}><CheckCircle2 size={16} />{item}</li>
+                ))}
+              </ul>
             </div>
           </main>
           <aside className="course-sidebar">
             <div className="sidebar-widget">
               <div className="sidebar-header">
-                <div className="provider-icon">🏢</div>
+                                <div className="provider-icon"><Building size={28} /></div>
                 <h3>Course Information</h3>
               </div>
               <div className="provider-info">
@@ -188,18 +182,18 @@ const CourseDetail = () => {
                 <span className="provider-name">{course.provider}</span>
               </div>
               <div className="prerequisites-section">
-                <h4>📋 Prerequisites</h4>
+                                <h4><ClipboardCheck size={20} /> Prerequisites</h4>
                 <ul>
                   {course.prerequisites.map((item, index) => (
                     <li key={index}>
-                      <span className="prereq-icon">✓</span>
+                                            <CheckCircle2 size={16} className="prereq-icon" />
                       {item}
                     </li>
                   ))}
                 </ul>
               </div>
-              <button className="enroll-now-btn">
-                <span className="btn-icon">🚀</span>
+                            <button className="enroll-now-btn">
+                <Rocket size={18} />
                 Enroll Now
               </button>
             </div>

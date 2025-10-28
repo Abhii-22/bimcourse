@@ -57,7 +57,7 @@ const Header = () => {
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <nav className="main-nav">
         <Link to="/" className="logo" onClick={closeMobileMenu}>
-          <img src="/images/BIMcourse White.png" alt="BIMcourse Logo" className="logo-image" />
+          <img src="/images/BIM Construct.png" alt="BIMcourse Logo" className="logo-image" />
         </Link>
         
         <button 

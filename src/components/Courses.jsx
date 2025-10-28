@@ -21,7 +21,7 @@ const courseData = [
     image:
       "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     price: "10,000",
-    duration: "8 Months",
+    duration: "4 Months",
     students: "950+",
     successRate: "94%",
     rating: 4.8,
@@ -45,7 +45,7 @@ const courseData = [
     image:
       "https://images.pexels.com/photos/4392033/pexels-photo-4392033.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     price: "10,000",
-    duration: "7 Months",
+    duration: "4 Months",
     students: "800+",
     successRate: "95%",
     rating: 4.9,
