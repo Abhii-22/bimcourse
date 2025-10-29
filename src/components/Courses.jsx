@@ -7,8 +7,7 @@ const courseData = [
     title: "Architectural Design",
     courseId: "architectural-design",
     image:
-      "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    price: "10,000",
+      "https://images.prismic.io/travauxlib/4c6ff268-9350-4578-b460-fb4101c5ba99_etape-realisation-plans-maison.jpg?auto=compress,format&rect=0,0,1050,700&w=1050&h=700",
     duration: "4 Months",
     students: "1,200+",
     successRate: "96%",
@@ -19,8 +18,7 @@ const courseData = [
     title: "Interior Design",
     courseId: "interior-design",
     image:
-      "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    price: "10,000",
+      "https://hdwallpaperim.com/wp-content/uploads/2017/08/25/121661-living_rooms-interiors-interior_design.jpg",
     duration: "4 Months",
     students: "950+",
     successRate: "94%",
@@ -31,8 +29,7 @@ const courseData = [
     title: "3D Modeling",
     courseId: "3d-modeling",
     image:
-      "https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    price: "10,000",
+      "https://media.sketchfab.com/models/a245e5c6292047a2a4f93531f402ad81/thumbnails/01330f536ae44996bba1d13ced4d1f1b/9eae26f741af4d6a8d3099c6ef5d7b82.jpeg",
     duration: "4 Months",
     students: "2,500+",
     successRate: "97%",
@@ -43,8 +40,7 @@ const courseData = [
     title: "Site Planning",
     courseId: "site-planning",
     image:
-      "https://images.pexels.com/photos/4392033/pexels-photo-4392033.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    price: "10,000",
+      "https://urbanplanninglife.com/wp-content/uploads/2020/02/site-plan-2-scaled.jpg",
     duration: "4 Months",
     students: "800+",
     successRate: "95%",
@@ -82,7 +78,7 @@ const Courses = () => {
                 ))}
               </div>
               <div className="course-footer">
-                <span className="course-price">₹{course.price}</span>
+                
                 <Link to={`/course/${course.courseId}`} className="explore-btn">
                   Learn More →
                 </Link>
