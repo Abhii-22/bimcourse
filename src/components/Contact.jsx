@@ -1,9 +1,11 @@
 import React from "react";
+import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import "./Contact.css";
 
 const Contact = () => {
   return (
-    <section className="contact-section" id="contact">
+    <>
+      <section className="contact-section" id="contact">
       <div className="contact-container">
         {/* Left Section */}
         <div className="contact-left">
@@ -43,7 +45,37 @@ const Contact = () => {
       </div>
       
     </section>
-    
+
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-about">
+          <h3>Medini Technologies</h3>
+          <p>Leading the future of digital construction with innovative BIM solutions.</p>
+        </div>
+        <div className="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#courses">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div className="footer-social">
+          <h4>Follow Us</h4>
+          <div className="social-icons">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><Facebook size={20} /></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><Twitter size={20} /></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><Linkedin size={20} /></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><Instagram size={20} /></a>
+          </div>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <p>&copy; 2025 Medini Technologies. All Rights Reserved.</p>
+      </div>
+    </footer>
+    </>
   );
 };
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./Feedback.css";
 
 const feedbacks = [
@@ -18,11 +18,13 @@ const feedbacks = [
 const TYPING_SPEED = 20; // faster typing so long messages finish
 const ROTATION_MS = Math.max(...feedbacks.map(f => f.text.length)) * TYPING_SPEED + 1200; // add pause after complete
 
-const TypewriterCard = ({ text, name }) => {
+const TypewriterCard = ({ text, name, isVisible }) => {
   const [displayedText, setDisplayedText] = useState('');
   const [showName, setShowName] = useState(false);
 
   useEffect(() => {
+    if (!isVisible) return;
+
     setDisplayedText('');
     setShowName(false);
     let i = 0;
@@ -37,7 +39,7 @@ const TypewriterCard = ({ text, name }) => {
     }, TYPING_SPEED);
 
     return () => clearInterval(typingInterval);
-  }, [text]);
+  }, [text, isVisible]);
 
   return (
     <div className="feedback-card">
@@ -51,8 +53,31 @@ const TypewriterCard = ({ text, name }) => {
 
 const Feedback = () => {
   const [indexes, setIndexes] = useState([0, 1, 2]);
+  const [isSectionVisible, setIsSectionVisible] = useState(false);
+  const sectionRef = useRef(null);
 
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsSectionVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 } // Trigger when 10% of the element is visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isSectionVisible) return;
+
     const interval = setInterval(() => {
       setIndexes((prev) => [
         (prev[0] + 3) % feedbacks.length,
@@ -62,10 +87,10 @@ const Feedback = () => {
     }, ROTATION_MS); // Rotate after typing completes
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isSectionVisible]);
 
   return (
-    <section className="feedback-section">
+    <section className="feedback-section" ref={sectionRef}>
       <h2>What Our Clients Say</h2>
       <div className="feedback-row">
         {indexes.map((feedbackIndex, i) => (
@@ -73,6 +98,7 @@ const Feedback = () => {
             key={feedbackIndex} // Use a more stable key
             text={feedbacks[feedbackIndex].text}
             name={feedbacks[feedbackIndex].name}
+            isVisible={isSectionVisible}
           />
         ))}
       </div>
