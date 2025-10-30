@@ -5,7 +5,7 @@ const About = () => {
   const [text, setText] = useState('');
   const sectionRef = useRef(null);
   const fullText =
-    'Empowering engineers, students, and professionals with world-class training in BIM infrastructure design and analysis software.';
+    'Pioneering the future of construction with innovative design and Building Information Modeling (BIM) expertise.';
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -50,7 +50,7 @@ const About = () => {
         <div className="about-hero animate-on-scroll">
           <div className="about-hero-content">
             <h2 className="about-heading">
-              About <span>BIMcourse</span>
+              About <span>BIM Construct</span>
             </h2>
             <p className="about-intro-animated">
               {text}
@@ -58,24 +58,21 @@ const About = () => {
             </p>
           </div>
           <div className="about-hero-image">
-            <img src="/images/about.jpg" alt="BIMcourse Overview" />
+            <img src="/images/about.jpg" alt="BIM Construct Office Design" />
           </div>
         </div>
 
         {/* ========== SECTION 2: MAIN CONTENT ========== */}
         <div className="about-main animate-on-scroll">
           <div className="about-image">
-            <img src="/images/about1.jpg" alt="BIMcourse Training" />
+            <img src="/images/about1.jpg" alt="BIM Construct Blueprint" />
           </div>
           <div className="about-description">
             <p>
-              Welcome to <strong>BIMcourse</strong> — your trusted destination for mastering
-              infrastructure design and analysis tools through guided learning and hands-on practice.
+              Welcome to <strong>BIM Construct</strong> — where innovative design meets precision construction. We specialize in transforming spaces and streamlining projects through the power of Building Information Modeling (BIM).
             </p>
             <p>
-              We help engineers, students, and professionals upgrade their skills through structured
-              courses, real-world projects, and professional mentorship — ensuring you're job-ready
-              for global opportunities in infrastructure design.
+              From residential and commercial renovations to large-scale property development, our team of experts leverages cutting-edge technology to deliver exceptional results, saving you time and money while bringing your vision to life.
             </p>
           </div>
         </div>
@@ -84,31 +81,31 @@ const About = () => {
         <div className="about-extras animate-on-scroll">
           <div className="about-highlights">
             <div className="highlight-card">
-              <h3>🔧 Industry-Focused Training</h3>
-              <p>Learn directly from certified professionals with years of field experience.</p>
+              <h3>✨ Innovative Design Solutions</h3>
+              <p>Our creative team delivers bespoke designs that are both beautiful and functional, tailored to your unique needs.</p>
             </div>
             <div className="highlight-card">
-              <h3>🏗️ Real Project Practice</h3>
-              <p>Hands-on experience with structural, civil, and water infrastructure design.</p>
+              <h3>🏗️ BIM-Powered Efficiency</h3>
+              <p>We use advanced BIM technology to optimize every phase of the construction process, ensuring accuracy and reducing waste.</p>
             </div>
             <div className="highlight-card">
-              <h3>🎓 Career Mentorship</h3>
-              <p>Our career mentors help you prepare for real interviews and job placements.</p>
+              <h3>🤝 Client-Centric Approach</h3>
+              <p>Your vision is our priority. We collaborate closely with you from concept to completion to ensure your expectations are exceeded.</p>
             </div>
           </div>
 
           <div className="about-stats">
             <div className="stat-card">
-              <h3>1000+</h3>
-              <p>Engineers Trained</p>
+              <h3>150+</h3>
+              <p>Projects Completed</p>
             </div>
             <div className="stat-card">
-              <h3>30+</h3>
-              <p>Software Tools Covered</p>
+              <h3>98%</h3>
+              <p>Client Satisfaction</p>
             </div>
             <div className="stat-card">
-              <h3>95%</h3>
-              <p>Placement Success</p>
+              <h3>1M+</h3>
+              <p>Sq. Ft. Designed</p>
             </div>
           </div>
         </div>

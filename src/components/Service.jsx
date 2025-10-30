@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Courses.css";
+import "./Service.css";
 
-const courseData = [
+const servicesData = [
   {
     title: "Architectural Design",
-    courseId: "architectural-design",
+    serviceId: "architectural-design",
     image:
       "https://images.prismic.io/travauxlib/4c6ff268-9350-4578-b460-fb4101c5ba99_etape-realisation-plans-maison.jpg?auto=compress,format&rect=0,0,1050,700&w=1050&h=700",
     duration: "4 Months",
@@ -16,7 +16,7 @@ const courseData = [
   },
   {
     title: "Interior Design",
-    courseId: "interior-design",
+    serviceId: "interior-design",
     image:
       "https://hdwallpaperim.com/wp-content/uploads/2017/08/25/121661-living_rooms-interiors-interior_design.jpg",
     duration: "4 Months",
@@ -27,7 +27,7 @@ const courseData = [
   },
   {
     title: "3D Modeling",
-    courseId: "3d-modeling",
+    serviceId: "3d-modeling",
     image:
       "https://media.sketchfab.com/models/a245e5c6292047a2a4f93531f402ad81/thumbnails/01330f536ae44996bba1d13ced4d1f1b/9eae26f741af4d6a8d3099c6ef5d7b82.jpeg",
     duration: "4 Months",
@@ -38,7 +38,7 @@ const courseData = [
   },
   {
     title: "Site Planning",
-    courseId: "site-planning",
+    serviceId: "site-planning",
     image:
       "https://urbanplanninglife.com/wp-content/uploads/2020/02/site-plan-2-scaled.jpg",
     duration: "4 Months",
@@ -49,37 +49,37 @@ const courseData = [
   },
 ];
 
-const Courses = () => {
+const Services = () => {
   return (
     <section id="courses" className="courses-section">
       <div className="courses-header">
-        <h2>Our Popular Courses</h2>
+        <h2>Our Popular Services</h2>
         <p>
           Explore our most advanced programs designed for future-ready professionals.
         </p>
       </div>
 
       <div className="courses-grid">
-        {courseData.map((course, index) => (
+        {servicesData.map((service, index) => (
           <div className="course-card" key={index}>
             <div
               className="course-img"
-              style={{ backgroundImage: `url(${course.image})` }}
+              style={{ backgroundImage: `url(${service.image})` }}
             ></div>
 
             <div className="course-content">
-              <h3>{course.title}</h3>
+              <h3>{service.title}</h3>
               <p className="course-meta">
-                🕒 {course.duration} &nbsp; | &nbsp; 👥 {course.students}
+                🕒 {service.duration} &nbsp; | &nbsp; 👥 {service.students}
               </p>
               <div className="course-tags">
-                {course.tags.map((tag, i) => (
+                {service.tags.map((tag, i) => (
                   <span key={i}>{tag}</span>
                 ))}
               </div>
               <div className="course-footer">
                 
-                <Link to={`/course/${course.courseId}`} className="explore-btn">
+                <Link to={`/service/${service.serviceId}`} className="explore-btn">
                   Learn More →
                 </Link>
               </div>
@@ -91,4 +91,4 @@ const Courses = () => {
   );
 };
 
-export default Courses;
+export default Services;

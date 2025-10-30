@@ -5,7 +5,7 @@ import './Home.css';
 const slides = [
   {
     src: '/images/arch.jpg',
-    courseId: 'Architectural Design',
+    serviceId: 'architectural-design',
     text: {
       title: 'Architectural Design',
       description:
@@ -14,7 +14,7 @@ const slides = [
   },
   {
     src: '/images/interior.jpg',
-    courseId: 'Interior Design',
+    serviceId: 'interior-design',
     text: {
       title: 'Interior Design',
       description:
@@ -23,7 +23,7 @@ const slides = [
   },
   {
     src: '/images/3D.jpg',
-    courseId: '3D Modeling',
+    serviceId: '3d-modeling',
     text: {
       title: '3D Modeling',
       description:
@@ -32,7 +32,7 @@ const slides = [
   },
   {
     src: '/images/Site.jpg',
-    courseId: 'Site Planning',
+    serviceId: 'site-planning',
     text: {
       title: 'Site Planning',
       description:
@@ -59,9 +59,9 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const exploreCourse = () => {
+  const exploreService = () => {
     const currentSlide = slides[currentSlideIndex];
-    navigate(`/course/${currentSlide.courseId}`);
+    navigate(`/service/${currentSlide.serviceId}`);
   };
 
   const currentSlide = slides[currentSlideIndex];
@@ -75,7 +75,7 @@ const Home = () => {
         <div className={`slider-text ${animation}`}>
           <h1>{currentSlide.text.title}</h1>
           <p>{currentSlide.text.description}</p>
-          <button className="explore-btn" onClick={exploreCourse}>Explore Course →</button>
+          <button className="explore-btn" onClick={exploreService}>Explore Services →</button>
         </div>
       </div>
     </div>

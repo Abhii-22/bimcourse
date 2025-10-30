@@ -2,17 +2,21 @@ import React, { useEffect, useState } from "react";
 import "./Feedback.css";
 
 const feedbacks = [
-  { name: "Rahul Sharma", text: "Amazing learning experience! The training was practical and easy to understand." },
-  { name: "Priya Verma", text: "Loved the real-world examples and projects. Great for career growth!" },
-  { name: "Amit Singh", text: "Professional trainers and very helpful team. Highly recommended!" },
-  { name: "Sneha Patel", text: "Excellent platform to gain industry-level skills quickly." },
-  { name: "Ravi Kumar", text: "The placement support was very impressive and genuine." },
-  { name: "Neha Gupta", text: "The trainers explained everything clearly with patience and examples." },
-  { name: "Vikram Joshi", text: "The UI/UX and flow of the sessions were amazing. Great job!" },
-  { name: "Kavya Iyer", text: "Hands-on projects helped me a lot in understanding complex concepts." },
-  { name: "Saurabh Jain", text: "It was a great experience. I improved my technical as well as soft skills." },
-  { name: "Ananya Das", text: "Wonderful mentors and learning environment. Highly satisfied!" },
+  { name: "Rahul ", text: "The BIM model provided incredible clarity throughout the project. We could visualize every detail before construction began, which saved us time and money." },
+  { name: "Priya prakash", text: "Your team’s coordination using BIM was outstanding. It helped avoid clashes between structural and MEP elements, making the execution seamless." },
+  { name: "Amit kumar", text:"We appreciated the transparency and regular updates. The 3D walkthroughs helped our stakeholders understand the design better than traditional drawings." },
+  { name: "Sneha Patel", text:"The project was delivered on time and within budget, thanks to the precision of your BIM planning. Truly professional work!"},
+  { name: "Ravi Kumar", text:"Your BIM approach helped us make informed decisions early in the design phase. The data-driven insights were a game-changer." },
+  { name: "Neha Gowda", text: "We were impressed by how quickly your team responded to feedback and incorporated changes into the model. It made us feel heard and valued."},
+  { name: "Vikram Joshi", text:"The clash detection and quantity take-offs were spot on. It reduced site errors and improved procurement efficiency."},
+  { name: "Kavya ", text: "Your BIM execution plan was clear and collaborative. It aligned perfectly with our goals and made the process smooth."},
+  { name: "Saurabh Jain", text: "The integration of sustainability analysis into the BIM model helped us meet our green building targets. Excellent work!" },
+  { name: "Ananya Das", text: "We’ve worked with other firms before, but your BIM capabilities and client engagement stood out. Looking forward to future projects together." },
 ];
+
+// Typing speed (ms per character) and rotation duration derived from longest text
+const TYPING_SPEED = 20; // faster typing so long messages finish
+const ROTATION_MS = Math.max(...feedbacks.map(f => f.text.length)) * TYPING_SPEED + 1200; // add pause after complete
 
 const TypewriterCard = ({ text, name }) => {
   const [displayedText, setDisplayedText] = useState('');
@@ -30,7 +34,7 @@ const TypewriterCard = ({ text, name }) => {
         clearInterval(typingInterval);
         setShowName(true);
       }
-    }, 40);
+    }, TYPING_SPEED);
 
     return () => clearInterval(typingInterval);
   }, [text]);
@@ -55,14 +59,14 @@ const Feedback = () => {
         (prev[1] + 3) % feedbacks.length,
         (prev[2] + 3) % feedbacks.length,
       ]);
-    }, 5000); // Change all cards every 5 seconds
+    }, ROTATION_MS); // Rotate after typing completes
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <section className="feedback-section">
-      <h2>What Our Students Say</h2>
+      <h2>What Our Clients Say</h2>
       <div className="feedback-row">
         {indexes.map((feedbackIndex, i) => (
           <TypewriterCard
