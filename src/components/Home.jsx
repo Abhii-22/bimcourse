@@ -5,40 +5,32 @@ import './Home.css';
 const slides = [
   {
     src: '/images/arch.jpg',
-    serviceId: 'architectural-design',
+    serviceId: 'bim-for-architecture',
     text: {
-      title: 'Architectural Design',
+      title: 'BIM for Architecture',
       description:
-        'BIM Architectural Design integrates intelligent 3D modeling with data-driven processes to enhance accuracy, collaboration, and efficiency, enabling architects to seamlessly plan, visualize, and manage projects from concept to construction.'
+        'Comprehensive training in BIM workflows for architectural design, focusing on creating intelligent 3D models for better design visualization and coordination.'
     }
   },
   {
-    src: '/images/interior.jpg',
-    serviceId: 'interior-design',
+    src: '/images/constr.webp',
+    serviceId: 'bim-for-construction',
     text: {
-      title: 'Interior Design',
+      title: 'BIM for Construction',
       description:
-        'Interior Design focuses on creating functional, aesthetic, and inspiring indoor spaces by combining creativity, spatial planning, and material selection to enhance comfort and style in residential and commercial environments.'
+        'Covers collaborative construction management, BIM standards, and on-site workflow optimization.'
     }
   },
   {
-    src: '/images/3D.jpg',
-    serviceId: '3d-modeling',
+    src: '/images/infra.jpg',
+    serviceId: 'bim-for-infrastructure',
     text: {
-      title: '3D Modeling',
+      title: 'BIM for Infrastructure',
       description:
-        '3D Modeling involves creating realistic digital representations of objects, structures, or environments using specialized software, enabling precise visualization, design analysis, and presentation before actual production or construction.'
+        'Comprehensive training in BIM methodologies for infrastructure projects including roads, bridges, and utilities, with focus on 4D scheduling and clash detection.'
     }
   },
-  {
-    src: '/images/Site.jpg',
-    serviceId: 'site-planning',
-    text: {
-      title: 'Site Planning',
-      description:
-        'Site Planning involves analyzing, organizing, and designing land use to optimize functionality, accessibility, and aesthetics while considering environmental, structural, and regulatory factors for sustainable development.'
-    }
-  },
+  
   
 ];
 
@@ -75,7 +67,7 @@ const Home = () => {
         <div className={`slider-text ${animation}`}>
           <h1>{currentSlide.text.title}</h1>
           <p>{currentSlide.text.description}</p>
-          <button className="explore-btn" onClick={exploreService}>Explore Services →</button>
+          <button className="explore-btn" onClick={exploreService}>Explore Courses →</button>
         </div>
       </div>
     </div>

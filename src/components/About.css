@@ -16,7 +16,7 @@
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
   margin-bottom: 5rem;
 }
 
@@ -30,6 +30,7 @@
   text-transform: uppercase;
   background: linear-gradient(135deg, #60a5fa, #2563eb, #06b6d4);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;
 }
@@ -104,10 +105,10 @@
 
 /* ========== SECTION 3: EXTRAS ========== */
 .about-highlights {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
 }
 
 .highlight-card {
@@ -136,10 +137,9 @@
 }
 
 .about-stats {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
 .stat-card {
@@ -172,8 +172,8 @@
 /* SCROLL ANIMATION */
 .animate-on-scroll {
   opacity: 0;
-  transform: translateY(40px);
-  transition: all 1s ease;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
 }
 
 .animate-on-scroll.is-visible {
@@ -189,8 +189,8 @@
     text-align: center;
   }
 
-  .about-highlights {
-    flex-direction: column;
+  .about-highlights, .about-stats {
+    grid-template-columns: 1fr;
   }
 
   .about-heading {

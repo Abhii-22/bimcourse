@@ -6,7 +6,7 @@
   width: 100%;
   background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%);
   backdrop-filter: blur(20px);
-  padding: 1.2rem 2rem;
+  padding: 0.8rem 2rem;
   box-shadow: 0 4px 20px rgba(37, 99, 235, 0.25);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -86,9 +86,9 @@
 }
 
 .nav-icon {
-  font-size: 1rem;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+  font-size: 1.2rem; /* Increase size slightly */
   transition: transform 0.3s ease;
+  vertical-align: middle; /* Align icons with text */
 }
 
 .main-nav a:hover .nav-icon {
@@ -118,7 +118,7 @@
   background: linear-gradient(135deg, #0a0f1f 0%, #1e3a8a 50%, #2563eb 100%);
   backdrop-filter: blur(25px);
   box-shadow: 0 4px 25px rgba(37, 99, 235, 0.35);
-  padding: 0.8rem 2rem;
+  padding: 0.5rem 2rem;
 }
 
 .header.scrolled .logo {
@@ -154,7 +154,7 @@
 /* Responsive: Mobile */
 @media (max-width: 768px) {
   .header {
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.5rem 1rem 0;
   }
 
   .main-nav {
@@ -206,17 +206,17 @@
   }
 
   .logo-image {
-    height: 28px;
+    height: 30px;
   }
 }
 
 @media (max-width: 480px) {
   .header {
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 1rem 0.75rem 0;
   }
 
   .logo-image {
-    height: 24px;
+    height: 28px;
   }
 
   .main-nav a {

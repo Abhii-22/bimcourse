@@ -45,12 +45,11 @@ const About = () => {
   return (
     <section id="about" className="about-section" ref={sectionRef}>
       <div className="about-wrapper">
-
         {/* ========== SECTION 1: HEADER INTRO ========== */}
         <div className="about-hero animate-on-scroll">
           <div className="about-hero-content">
             <h2 className="about-heading">
-              About <span>BIM Construct</span>
+              Unlock Your Potential with <span>BIM Construct Courses</span>
             </h2>
             <p className="about-intro-animated">
               {text}
@@ -58,21 +57,21 @@ const About = () => {
             </p>
           </div>
           <div className="about-hero-image">
-            <img src="/images/about.jpg" alt="BIM Construct Office Design" />
+            <img src="/images/about.jpg" alt="Students learning BIM" />
           </div>
         </div>
 
         {/* ========== SECTION 2: MAIN CONTENT ========== */}
         <div className="about-main animate-on-scroll">
           <div className="about-image">
-            <img src="/images/about1.jpg" alt="BIM Construct Blueprint" />
+            <img src="/images/about1.jpg" alt="Collaborative learning environment" />
           </div>
           <div className="about-description">
             <p>
-              Welcome to <strong>BIM Construct</strong> — where innovative design meets precision construction. We specialize in transforming spaces and streamlining projects through the power of Building Information Modeling (BIM).
+              Welcome to <strong>BIM Construct's learning hub</strong>. We are dedicated to empowering the next generation of architects, engineers, and construction professionals with industry-leading BIM training.
             </p>
             <p>
-              From residential and commercial renovations to large-scale property development, our team of experts leverages cutting-edge technology to deliver exceptional results, saving you time and money while bringing your vision to life.
+              Our courses are designed by experts to provide practical, hands-on knowledge. Whether you're starting your career or upskilling, we provide the tools and expertise you need to succeed in the rapidly evolving world of construction technology.
             </p>
           </div>
         </div>
@@ -81,31 +80,31 @@ const About = () => {
         <div className="about-extras animate-on-scroll">
           <div className="about-highlights">
             <div className="highlight-card">
-              <h3>✨ Innovative Design Solutions</h3>
-              <p>Our creative team delivers bespoke designs that are both beautiful and functional, tailored to your unique needs.</p>
+              <h3>🎓 Expert-Led Instruction</h3>
+              <p>Learn from seasoned industry professionals who bring real-world experience to the classroom.</p>
             </div>
             <div className="highlight-card">
-              <h3>🏗️ BIM-Powered Efficiency</h3>
-              <p>We use advanced BIM technology to optimize every phase of the construction process, ensuring accuracy and reducing waste.</p>
+              <h3>🛠️ Hands-On Projects</h3>
+              <p>Apply your skills to practical projects that mirror the challenges of a real construction site.</p>
             </div>
             <div className="highlight-card">
-              <h3>🤝 Client-Centric Approach</h3>
-              <p>Your vision is our priority. We collaborate closely with you from concept to completion to ensure your expectations are exceeded.</p>
+              <h3>📈 Career-Focused Curriculum</h3>
+              <p>Our courses are tailored to meet industry demands and help you achieve your career goals.</p>
             </div>
           </div>
 
           <div className="about-stats">
             <div className="stat-card">
-              <h3>150+</h3>
-              <p>Projects Completed</p>
+              <h3>5,000+</h3>
+              <p>Students Trained</p>
             </div>
             <div className="stat-card">
-              <h3>98%</h3>
-              <p>Client Satisfaction</p>
+              <h3>4.5</h3>
+              <p>Average Rating</p>
             </div>
             <div className="stat-card">
-              <h3>1M+</h3>
-              <p>Sq. Ft. Designed</p>
+              <h3>30+</h3>
+              <p>Expert Instructors</p>
             </div>
           </div>
         </div>

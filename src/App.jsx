@@ -5,8 +5,9 @@ import Home from './components/Home';
 import About from './components/About';
 import Feedback from './components/Feedback';
 import Contact from './components/Contact';
-import ServiceDetail from './pages/ServiceDetail';
-import Service from './components/Service';
+import Course from './components/Course';
+import CourseDetail from './pages/CourseDetail';
+
 
 
 import './App.css';
@@ -17,8 +18,8 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<><Home /><About /><Service /><Feedback /><Contact /></>} />
-          <Route path="/service/:serviceId" element={<ServiceDetail />} />
+          <Route path="/" element={<><Home /><About /><Course /><Feedback /><Contact /></>} />
+          <Route path="/service/:serviceId" element={<CourseDetail />} />
         </Routes>
       </div>
     </Router>

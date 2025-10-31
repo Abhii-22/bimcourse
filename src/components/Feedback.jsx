@@ -2,16 +2,16 @@ import React, { useEffect, useState, useRef } from "react";
 import "./Feedback.css";
 
 const feedbacks = [
-  { name: "Rahul ", text: "The BIM model provided incredible clarity throughout the project. We could visualize every detail before construction began, which saved us time and money." },
-  { name: "Priya prakash", text: "Your team’s coordination using BIM was outstanding. It helped avoid clashes between structural and MEP elements, making the execution seamless." },
-  { name: "Amit kumar", text:"We appreciated the transparency and regular updates. The 3D walkthroughs helped our stakeholders understand the design better than traditional drawings." },
-  { name: "Sneha Patel", text:"The project was delivered on time and within budget, thanks to the precision of your BIM planning. Truly professional work!"},
-  { name: "Ravi Kumar", text:"Your BIM approach helped us make informed decisions early in the design phase. The data-driven insights were a game-changer." },
-  { name: "Neha Gowda", text: "We were impressed by how quickly your team responded to feedback and incorporated changes into the model. It made us feel heard and valued."},
-  { name: "Vikram Joshi", text:"The clash detection and quantity take-offs were spot on. It reduced site errors and improved procurement efficiency."},
-  { name: "Kavya ", text: "Your BIM execution plan was clear and collaborative. It aligned perfectly with our goals and made the process smooth."},
-  { name: "Saurabh Jain", text: "The integration of sustainability analysis into the BIM model helped us meet our green building targets. Excellent work!" },
-  { name: "Ananya Das", text: "We’ve worked with other firms before, but your BIM capabilities and client engagement stood out. Looking forward to future projects together." },
+  { name: "Rahul S.", text: "This course gave me incredible clarity on BIM modeling. I can now visualize project details in a way I never thought possible, which is a huge boost for my career." },
+  { name: "Priya Prakash", text: "The hands-on training in BIM coordination was outstanding. Learning to avoid clashes between structural and MEP elements is a skill I'll use forever." },
+  { name: "Amit Kumar", text: "I appreciated the clear, step-by-step lessons. The 3D walkthroughs helped me grasp complex designs much better than any textbook could." },
+  { name: "Sneha Patel", text: "The course was perfectly paced and delivered on its promise. The precision of BIM planning is something I now use in all my projects. Truly professional training!" },
+  { name: "Ravi Kumar", text: "This course taught me how to make informed decisions early in the design phase. The data-driven insights I gained have been a game-changer for me." },
+  { name: "Neha Gowda", text: "I was impressed by how quickly the instructors responded to our questions and incorporated feedback into the lessons. It made me feel heard and valued as a student." },
+  { name: "Vikram Joshi", text: "The modules on clash detection and quantity take-offs were spot on. I feel much more confident in my ability to reduce site errors and improve efficiency." },
+  { name: "Kavya M.", text: "The course on BIM execution planning was clear and collaborative. It aligned perfectly with my career goals and made the learning process smooth." },
+  { name: "Saurabh Jain", text: "Learning to integrate sustainability analysis into BIM models has helped me contribute to green building targets. Excellent and forward-thinking course!" },
+  { name: "Ananya Das", text: "I’ve taken other courses before, but the practical skills and instructor engagement here stood out. I'm looking forward to taking more advanced courses with you!" },
 ];
 
 // Typing speed (ms per character) and rotation duration derived from longest text

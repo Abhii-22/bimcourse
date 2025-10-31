@@ -64,10 +64,9 @@ const Contact = () => {
         <div className="footer-social">
           <h4>Follow Us</h4>
           <div className="social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><Facebook size={20} /></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><Twitter size={20} /></a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><Linkedin size={20} /></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><Instagram size={20} /></a>
+            
+            <a href="https://www.linkedin.com/company/medinitechnologies/posts/?feedView=all" target="_blank" rel="noopener noreferrer"><Linkedin size={20} /></a>
+            <a href="https://www.instagram.com/medinitechnologies/" target="_blank" rel="noopener noreferrer"><Instagram size={20} /></a>
           </div>
         </div>
       </div>

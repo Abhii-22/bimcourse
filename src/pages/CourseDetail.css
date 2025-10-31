@@ -282,8 +282,9 @@
 
 .provider-info {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  gap: 0.5rem; /* Add space between items */
   margin-bottom: 2rem;
   padding: 1.5rem;
   background: var(--dark-bg);
