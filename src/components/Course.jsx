@@ -70,7 +70,7 @@ const Services = () => {
               <div className="course-footer">
                 
                 <Link to={`/service/${service.serviceId}`} className="explore-btn">
-                  Learn More →
+                  Explore More →
                 </Link>
               </div>
             </div>
