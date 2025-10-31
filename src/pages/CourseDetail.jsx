@@ -18,7 +18,7 @@ const ServiceDetail = () => {
       category: 'BIM for Architecture',
       description:
         'Comprehensive training in BIM workflows for architectural design, focusing on creating intelligent 3D models for better design visualization and coordination.',
-      duration: '6 months',
+      duration: '4 months',
       level: 'Intermediate',
       audience: 'Architects, Designers (ARCH)',
       provider: 'BIM_ARCHITECTURE',
@@ -45,7 +45,7 @@ const ServiceDetail = () => {
       category: 'BIM for Construction',
       description:
         'Covers collaborative construction management, BIM standards, and on-site workflow optimization.',
-      duration: '6 months',
+      duration: '4 months',
       level: 'Advanced',
       audience: 'Civil (CIV)',
       provider: 'BIM_CONSTRUCTION',
@@ -72,7 +72,7 @@ const ServiceDetail = () => {
       category: 'BIM for Infrastructure',
       description:
         'Comprehensive training in BIM methodologies for infrastructure projects including roads, bridges, and utilities, with focus on 4D scheduling and clash detection.',
-      duration: '6 months',
+      duration: '4 months',
       level: 'Advanced',
       audience: 'Civil Engineers, Infrastructure Specialists (CIV)',
       provider: 'BIM_INFRASTRUCTURE',
