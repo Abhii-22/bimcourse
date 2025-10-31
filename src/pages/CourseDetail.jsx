@@ -21,7 +21,7 @@ const ServiceDetail = () => {
       duration: '6 months',
       level: 'Intermediate',
       audience: 'Architects, Designers (ARCH)',
-      provider: 'BIM_CONSTRUCTION',
+      provider: 'BIM_ARCHITECTURE',
       curriculum: [
         'Introduction to BIM in Architecture',
         '3D Modeling for Architectural Design',
@@ -75,7 +75,7 @@ const ServiceDetail = () => {
       duration: '6 months',
       level: 'Advanced',
       audience: 'Civil Engineers, Infrastructure Specialists (CIV)',
-      provider: 'BIM_CONSTRUCTION',
+      provider: 'BIM_INFRASTRUCTURE',
       curriculum: [
         'BIM Standards for Infrastructure',
         '3D Modeling for Civil Infrastructure',

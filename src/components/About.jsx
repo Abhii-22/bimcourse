@@ -49,7 +49,7 @@ const About = () => {
         <div className="about-hero animate-on-scroll">
           <div className="about-hero-content">
             <h2 className="about-heading">
-              Unlock Your Potential with <span>BIM Construct Courses</span>
+              Unlock Your Potential with <span>BIM Courses</span>
             </h2>
             <p className="about-intro-animated">
               {text}
@@ -68,7 +68,7 @@ const About = () => {
           </div>
           <div className="about-description">
             <p>
-              Welcome to <strong>BIM Construct's learning hub</strong>. We are dedicated to empowering the next generation of architects, engineers, and construction professionals with industry-leading BIM training.
+              Welcome to <strong>BIM Course's learning hub</strong>. We are dedicated to empowering the next generation of architects, engineers, and construction professionals with industry-leading BIM training.
             </p>
             <p>
               Our courses are designed by experts to provide practical, hands-on knowledge. Whether you're starting your career or upskilling, we provide the tools and expertise you need to succeed in the rapidly evolving world of construction technology.
